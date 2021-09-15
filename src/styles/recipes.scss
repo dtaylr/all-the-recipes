@@ -1,0 +1,265 @@
+$med: 767px;
+$lrg: 1050px;
+
+@mixin lrgScrn {
+    @media (min-width: #{$lrg}){
+        .instruct-container{
+            max-width: 55%;
+        }
+    }
+}
+
+@mixin medScrn{
+    @media (min-width: #{$med}){
+
+        #meals{
+            grid-template-columns: repeat(auto-fill, 340px);
+        }
+
+        .detail-info{
+            display: flex;
+            align-items: center;   
+            padding-bottom: 3rem;    
+        }
+
+        .detail-head{
+            display: flex;
+            justify-content: center;
+            width: 80vw;
+        }
+
+        .detail-title{
+            padding: 3em;
+        }
+
+        .instruct-container{
+            // width: 70%;
+            padding-top: 2em;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .instructions p{
+            padding: 2em;
+        }
+
+        .cat-info{
+            padding: 0;
+        }
+
+        .ingredients h4{
+            margin: 0 0 1rem 0;
+        }
+        .recipe-list,
+        .ingredients h4,
+        .recipe-title{
+            padding: 0;
+        }
+
+        .recipe-title{
+            padding-bottom: 1.1rem;
+            padding-top: 2rem;
+        }
+        .ingredients{
+            padding-top: 0;
+            padding-left: 8rem;
+        }
+
+        img{
+            width:  400px;
+            height: 400px;
+        }
+    }
+}
+
+#meals{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-gap: 1.3rem;
+    width: 90vw;
+    padding-bottom: 3em;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3rem;
+
+    .meal-container{
+        padding-bottom: 1rem;
+        width: 100%;
+        border-radius: 5px;
+        padding: .8em 1em;
+        box-shadow: 
+        inset 0 -3em 3em rgba(0,0,0,0.1), 
+              0 0  0 1px #C4D925,
+              0.3em 0.3em 1em rgba(0,0,0,0.3)
+    }
+
+    .meal-title{
+        font-size: 1.1rem;
+        margin: 1.3rem 0;
+    }
+
+    .meal-desc, .meal-cntrls{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: .6em;
+        align-items: center;
+        font-weight: 600;
+    }
+
+    .meal-cat, .meal-area{
+        margin: .7em 0;
+        font-size: .8rem;
+    }
+
+    svg{
+        color: green;
+        font-size: 1.7rem;
+        margin: 0px .2rem;
+        cursor: pointer;
+    }
+
+    svg:hover{
+        color: red;
+    }
+
+    img{
+        width: 100%;
+        height: 240px;
+        border-radius: 5px;
+    }
+  
+}
+
+.randoms-title{
+    text-align: center;
+    margin: 2em 0;
+}
+
+.pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.pages li{
+    display: block;
+    padding: .6rem;
+    border: 1px solid grey;
+}
+
+.pages a, .pages li{
+    text-decoration: none; 
+    list-style: none;
+}
+
+.filtered{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1.3rem;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3rem;
+}
+
+.detail-container, .modal-container  {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    // width: 85vw;
+
+    // li{
+    //     list-style: none;
+    // }
+    h1{
+        text-align: center;
+    }
+
+    @include medScrn();
+    @include lrgScrn();
+
+}
+
+.detail-container{
+ width: 80vw;
+
+}
+
+    .detail-desc{
+        margin-top: 1.4rem;
+    }
+
+    .detail-desc p{
+        margin-bottom: 1rem;
+    }
+
+    .ingredients h4{
+        margin: 1.2rem 0;
+    }
+
+    .instruct-container{
+        padding-top: 1rem;
+        justify-content: center;
+    }
+
+    img{
+        width: 100%;
+        
+    }
+
+    .detail-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .instructions{
+        padding-top: .5rem;
+    }
+
+    .cat-info{
+        padding: 1.3rem 0;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    // .recipe-list,
+    // .ingredients h4,
+    // .instruct-title,
+    // .instructions{
+    //     padding-left: 1.2rem;
+    // }
+
+    .cat-info p{
+        margin-top: 1rem;
+    }
+
+   .ingredients{
+        padding-top: 1.5rem;
+
+   }
+
+   .ingredients p{
+        padding-bottom: 1.1rem;
+   }
+
+
+   .recipe-list li{
+       padding-bottom: .7em;
+   }
+
+   .recipe-list li:nth-of-type(){
+       padding-bottom: none;
+   }
+    .detail-title{
+        padding: 1.5em 0em;
+    }

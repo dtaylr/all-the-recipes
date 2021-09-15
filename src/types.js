@@ -1,0 +1,13 @@
+export const GET_RECIPES = 'GET_MEALS';
+export const GET_RECIPE = 'GET_MEAL';
+export const SEARCH_RECIPES = 'SEARCH_MEAL';
+export const SET_RECIPES = 'SET_MEALS';
+export const RECIPE_MODAL = ' RECIPE_MODAL';
+export const CLOSE_MODAL = 'CLOSE_MODAL;'
+export const SET_LOADING = 'SET_LOADING';
+export const ADD_FAVORITE = 'ADD_FAVORITE';
+export const SEARCH_ERROR = 'SEARCH_ERROR'
+export const GET_FAVORITES = 'GET_FAVORITES';
+export const BLANK_SEARCH = 'BLANK_SEARCH';
+export const TOGGLE_MODAL = 'TOGGLE_MODAL';
+export const REMOVE_FAVORITE = 'REMOVE_FAVORITE'
